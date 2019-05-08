@@ -11,7 +11,6 @@ An example to check XSS attacks is given.
 Install dependencies with pip:
 ```
 pip install -r requirements.txt
-
 ```
 
 ### Usage
