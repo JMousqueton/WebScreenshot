@@ -18,6 +18,11 @@ pip install -r requirements.txt
 python WebScreenshot.py
 ```
 
+## Output example 
+
+![Output example](https://i.imgur.com/l1s6KnW.png)
+
+
 ## Demo
 
 * [Youtube](https://www.youtube.com/watch?v=FsoKsGZufPk)
