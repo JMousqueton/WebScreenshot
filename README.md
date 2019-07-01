@@ -1,4 +1,4 @@
-# WebScreenshot
+# WebScreenshot (v 1.0)
 Tool to get screenshots for different URL/Webs. 
 
 It can be used to check SQLi, XSS, defacements or simply to monitor a given Web.
@@ -20,6 +20,6 @@ python WebScreenshot.py
 
 ## Demo
 
-* [Youtube](https://youtu.be/_9L5FmwPIsY)
+* [Youtube](https://www.youtube.com/watch?v=FsoKsGZufPk)
 
 
