@@ -1,4 +1,4 @@
-# WebScreenshot (v 1.0)
+# WebScreenshot
 Tool to get screenshots for different URL/Webs. 
 
 It can be used to check SQLi, XSS, defacements or simply to monitor a given Web.
