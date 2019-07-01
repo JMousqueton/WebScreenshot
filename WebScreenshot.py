@@ -29,6 +29,13 @@ screenshot_path = ("results")
 if not os.path.exists(screenshot_path):
 	os.makedirs(screenshot_path)
 
+#Colors
+RED = '\033[91m'
+ENDC = '\033[0m'
+GREEN = '\033[1;32m'
+WHITE = '\033[1m'
+BOLD = '\033[01m'
+
 # Browser configuration
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("--incognito")
@@ -49,7 +56,7 @@ contador=0
 
 for url in urls:
 	aux_tld = get_tld(url, as_object=True)
-	print("%s. URL: %s") % (str(contador),url)
+	print("[%s] URL: %s") % (str(contador),url)
 
 	#timestamp=str(time.strftime("%Y%m%d_%H-%M-%S"))
 	new_screenshot =('%s/%s_%s-%s.png') % (screenshot_path,str(contador),str(aux_tld.domain),str(aux_tld.suffix))
@@ -58,12 +65,13 @@ for url in urls:
 
 	# EXAMPLE
 	# Finding a XSS attack
-#	try:
-#		driver.switch_to.alert.accept()
-#		print('[!] XSS FOUND ON ' + str(contador))
-#	except:
-#		print('There is no XSS')
+	try:
+		driver.switch_to.alert.accept()
+		print('\t- ' + RED + '[!] XSS FOUND' + ENDC)
+	except:
+		print('\t- Clean')
 
 	screenshot = driver.save_screenshot(new_screenshot)
 	contador=contador+1
+	print(40*"=")
 driver.quit()
