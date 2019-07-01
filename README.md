@@ -28,3 +28,4 @@ python WebScreenshot.py
 * [Youtube](https://www.youtube.com/watch?v=FsoKsGZufPk)
 
 
+© @danlopgom
