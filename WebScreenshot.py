@@ -52,14 +52,13 @@ with open('urls.dat', 'r') as f:
 urls = [x.strip() for x in urls]
 
 # Starts
-contador=0
 
 for url in urls:
 	aux_tld = get_tld(url, as_object=True)
 	print("[%s] URL: %s") % (str(contador),url)
 
 	#timestamp=str(time.strftime("%Y%m%d_%H-%M-%S"))
-	new_screenshot =('%s/%s_%s-%s.png') % (screenshot_path,str(contador),str(aux_tld.domain),str(aux_tld.suffix))
+	new_screenshot =('%s/%s-%s.png') % (screenshot_path,str(aux_tld.domain),str(aux_tld.suffix))
 
 	driver.get(url)
 
@@ -72,6 +71,5 @@ for url in urls:
 		print('\t- Clean')
 
 	screenshot = driver.save_screenshot(new_screenshot)
-	contador=contador+1
 	print(40*"=")
 driver.quit()
