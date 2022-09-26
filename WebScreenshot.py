@@ -55,7 +55,7 @@ urls = [x.strip() for x in urls]
 
 for url in urls:
 	aux_tld = get_tld(url, as_object=True)
-	print("[%s] URL: %s") % (str(contador),url)
+	print("- URL: %s") % (url)
 
 	#timestamp=str(time.strftime("%Y%m%d_%H-%M-%S"))
 	new_screenshot =('%s/%s-%s.png') % (screenshot_path,str(aux_tld.domain),str(aux_tld.suffix))
